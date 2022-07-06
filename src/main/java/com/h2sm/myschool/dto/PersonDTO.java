@@ -1,4 +1,4 @@
-package com.h2sm.myschool.dto.persons;
+package com.h2sm.myschool.dto;
 
 import com.h2sm.myschool.enums.Gender;
 import com.h2sm.myschool.enums.Position;

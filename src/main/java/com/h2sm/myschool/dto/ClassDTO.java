@@ -1,12 +1,19 @@
 package com.h2sm.myschool.dto;
 
-import com.h2sm.myschool.dto.persons.StudentDTO;
-import com.h2sm.myschool.dto.persons.TeacherDTO;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-public class ClassModel {
-    private TeacherDTO teacherDTO;
-    private List<StudentDTO> students;
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Data
+public class ClassDTO {
+    private long classID;
+    private PersonDTO homeroomTeacher;
+    private List<PersonDTO> listOfStudents;
     private String className;
 }
