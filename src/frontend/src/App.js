@@ -1,22 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import {TimetableSection} from "./pages/TimetableSection";
+import {Login} from "./pages/login/Login";
+import {useState} from "react";
 
 function App() {
+    const [logged, setLogged] = useState(false);
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+          <Login setLogged={setLogged}/>
         <p>
-          Edit <code>src/App.js</code> and save sto reload.
+          Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <TimetableSection/>
       </header>
     </div>
   );
