@@ -8,13 +8,13 @@ import javax.persistence.*;
 @Table(name = "subjects")
 @Data
 @Entity
-public class SubjectsEntity {
+public class SubjectEntity {
     @Id
     @Column(name = "subject_id")
     private long id;
     @Column(name = "teacher_id")
     @OneToOne
-    private PersonsEntity teacher;
+    private PersonEntity teacher;
     @Column(name = "subject_name")
     private String subjectName;
     @Column(name = "subject_description")

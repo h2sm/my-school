@@ -8,13 +8,13 @@ import java.sql.Date;
 @Table(name = "lessons")
 @Data
 @Entity
-public class LessonsEntity {
+public class LessonEntity {
     @Id
     @Column(name = "lesson_id")
     private long id;
     @Column(name = "subject_id")
     @OneToOne
-    private SubjectsEntity subjectEntity;
+    private SubjectEntity subjectEntity;
     @Column(name = "homework")
     private String homework;
     @Column(name = "lesson_description")
@@ -23,5 +23,5 @@ public class LessonsEntity {
     private Date dateOfLesson;
     @Column(name = "class_id")
     @OneToOne
-    private ClassesEntity participatingClass;
+    private ClassEntity participatingClass;
 }

@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "classes")
 @Data
-public class ClassesEntity {
+public class ClassEntity {
     @Id
     @Column(name = "class_id")
     private long id;
@@ -16,5 +16,5 @@ public class ClassesEntity {
     private String className;
     @Column(name = "homeroom_teacher_id")
     @OneToOne
-    private PersonsEntity homeroomTeacher;
+    private PersonEntity homeroomTeacher;
 }

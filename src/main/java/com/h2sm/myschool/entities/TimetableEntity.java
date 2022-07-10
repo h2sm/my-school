@@ -15,10 +15,10 @@ public class TimetableEntity {
     private long id;
     @Column(name = "class_id")
     @OneToOne
-    private ClassesEntity classesEntity;
+    private ClassEntity classEntity;
     @Column(name = "subject_id")
     @OneToOne
-    private SubjectsEntity subjects;
+    private SubjectEntity subjects;
     @Column(name = "lesson_start_timestamp")
     private Time timeStart;
     @Column(name = "lesson_stop_timestamp")

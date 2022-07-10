@@ -8,7 +8,7 @@ import java.sql.Date;
 @Table(name = "marks")
 @Data
 @Entity
-public class MarksEntity {
+public class MarkEntity {
     @Id
     @Column(name = "mark_id")
     private long id;
@@ -16,10 +16,10 @@ public class MarksEntity {
     private int mark;
     @Column(name = "lesson_id")
     @OneToOne
-    private LessonsEntity lesson;
+    private LessonEntity lesson;
     @Column(name = "student_id")
     @OneToOne
-    private PersonsEntity student;
+    private PersonEntity student;
     @Column(name = "date")
     private Date date;
     @Column(name = "description")
