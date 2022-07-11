@@ -1,8 +1,8 @@
-package com.h2sm.myschool.security.security.service;
+package com.h2sm.myschool.security.service;
 
 import com.h2sm.myschool.entities.PersonEntity;
 import com.h2sm.myschool.repository.PersonRepository;
-import com.h2sm.myschool.security.security.SecurityUtils;
+import com.h2sm.myschool.security.SecurityUtils;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

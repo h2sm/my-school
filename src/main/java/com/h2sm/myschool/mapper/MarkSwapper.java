@@ -1,4 +1,4 @@
-package com.h2sm.myschool.conf;
+package com.h2sm.myschool.mapper;
 
 import com.h2sm.myschool.dto.MarkDTO;
 import com.h2sm.myschool.entities.MarkEntity;

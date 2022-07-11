@@ -1,4 +1,4 @@
-package com.h2sm.myschool.conf;
+package com.h2sm.myschool.mapper;
 
 import com.h2sm.myschool.dto.PersonDTO;
 import com.h2sm.myschool.entities.PersonEntity;

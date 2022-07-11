@@ -12,7 +12,7 @@ public class LessonEntity {
     @Id
     @Column(name = "lesson_id")
     private long id;
-    @Column(name = "subject_id")
+    @JoinColumn(name = "subject_id")
     @OneToOne
     private SubjectEntity subjectEntity;
     @Column(name = "homework")
@@ -21,7 +21,7 @@ public class LessonEntity {
     private String lessonDescription;
     @Column(name = "date_of_lesson")
     private Date dateOfLesson;
-    @Column(name = "class_id")
+    @JoinColumn(name = "class_id")
     @OneToOne
     private ClassEntity participatingClass;
 }

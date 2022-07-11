@@ -14,7 +14,7 @@ public class ClassEntity {
     private long id;
     @Column(name = "class_name")
     private String className;
-    @Column(name = "homeroom_teacher_id")
+    @JoinColumn(name = "homeroom_teacher_id")
     @OneToOne
     private PersonEntity homeroomTeacher;
 }

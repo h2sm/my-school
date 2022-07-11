@@ -1,9 +1,9 @@
-package com.h2sm.myschool.security.security.rest;
+package com.h2sm.myschool.security.rest;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.h2sm.myschool.security.security.jwt.JWTFilter;
-import com.h2sm.myschool.security.security.jwt.TokenProvider;
-import com.h2sm.myschool.security.security.rest.dto.LoginDto;
+import com.h2sm.myschool.security.jwt.TokenProvider;
+import com.h2sm.myschool.security.jwt.JWTFilter;
+import com.h2sm.myschool.security.dto.LoginDto;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -14,7 +14,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -23,7 +22,7 @@ import javax.validation.Valid;
  * Controller to authenticate users.
  */
 @RestController
-@RequestMapping("/api")
+//@RequestMapping("/api")
 @AllArgsConstructor
 public class AuthenticationRestController {
 
@@ -32,7 +31,7 @@ public class AuthenticationRestController {
    private final AuthenticationManagerBuilder authenticationManagerBuilder;
 
 
-   @PostMapping("/authenticate")
+   @PostMapping("/api/authenticate")
    public ResponseEntity<JWTToken> authorize(@Valid @RequestBody LoginDto loginDto) {
 
       UsernamePasswordAuthenticationToken authenticationToken =

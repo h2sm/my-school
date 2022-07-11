@@ -1,9 +1,7 @@
 package com.h2sm.myschool.services;
 
-import com.h2sm.myschool.conf.MarkSwapper;
+import com.h2sm.myschool.mapper.MarkSwapper;
 import com.h2sm.myschool.dto.MarkDTO;
-import com.h2sm.myschool.dto.PersonDTO;
-import com.h2sm.myschool.enums.Position;
 import com.h2sm.myschool.repository.MarkRepository;
 import com.h2sm.myschool.repository.PersonRepository;
 import lombok.AllArgsConstructor;

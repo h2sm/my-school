@@ -14,10 +14,10 @@ public class MarkEntity {
     private long id;
     @Column(name = "mark")
     private int mark;
-    @Column(name = "lesson_id")
+    @JoinColumn(name = "lesson_id")
     @OneToOne
     private LessonEntity lesson;
-    @Column(name = "student_id")
+    @JoinColumn(name = "student_id")
     @OneToOne
     private PersonEntity student;
     @Column(name = "date")

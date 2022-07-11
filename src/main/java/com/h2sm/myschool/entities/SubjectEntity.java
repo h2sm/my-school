@@ -12,7 +12,7 @@ public class SubjectEntity {
     @Id
     @Column(name = "subject_id")
     private long id;
-    @Column(name = "teacher_id")
+    @JoinColumn(name = "teacher_id")
     @OneToOne
     private PersonEntity teacher;
     @Column(name = "subject_name")

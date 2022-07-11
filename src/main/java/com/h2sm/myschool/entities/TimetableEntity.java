@@ -13,10 +13,10 @@ public class TimetableEntity {
     @Id
     @Column(name = "table_row_id")
     private long id;
-    @Column(name = "class_id")
+    @JoinColumn(name = "class_id")
     @OneToOne
     private ClassEntity classEntity;
-    @Column(name = "subject_id")
+    @JoinColumn(name = "subject_id")
     @OneToOne
     private SubjectEntity subjects;
     @Column(name = "lesson_start_timestamp")

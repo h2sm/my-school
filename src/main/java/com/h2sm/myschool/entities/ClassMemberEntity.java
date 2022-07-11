@@ -10,10 +10,10 @@ import javax.persistence.*;
 public class ClassMemberEntity {
     @Id
     private long id;
-    @Column(name = "class_id")
+    @JoinColumn(name = "class_id")
     @OneToOne
     private ClassEntity classEntity;
-    @Column(name = "student_id")
+    @JoinColumn(name = "student_id")
     @OneToOne
     private PersonEntity student;
 }

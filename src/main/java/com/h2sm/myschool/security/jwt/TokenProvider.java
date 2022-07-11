@@ -1,4 +1,4 @@
-package com.h2sm.myschool.security.security.jwt;
+package com.h2sm.myschool.security.jwt;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;

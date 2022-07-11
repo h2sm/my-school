@@ -1,4 +1,4 @@
-package com.h2sm.myschool.security.security.jwt;
+package com.h2sm.myschool.security.jwt;
 
 import lombok.AllArgsConstructor;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;

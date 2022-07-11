@@ -1,4 +1,4 @@
-package com.h2sm.myschool.security.security;
+package com.h2sm.myschool.security;
 
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

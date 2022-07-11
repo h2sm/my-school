@@ -1,8 +1,8 @@
-package com.h2sm.myschool.security.security.rest;
+package com.h2sm.myschool.security.rest;
 
-import com.h2sm.myschool.conf.PersonSwapper;
+import com.h2sm.myschool.mapper.PersonSwapper;
 import com.h2sm.myschool.dto.PersonDTO;
-import com.h2sm.myschool.security.security.service.UserService;
+import com.h2sm.myschool.security.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

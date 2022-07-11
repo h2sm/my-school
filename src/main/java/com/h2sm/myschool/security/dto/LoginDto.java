@@ -1,4 +1,4 @@
-package com.h2sm.myschool.security.security.rest.dto;
+package com.h2sm.myschool.security.dto;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
@@ -16,7 +16,7 @@ public class LoginDto {
    private String username;
 
    @NotNull
-   @Size(min = 4, max = 100)
+   @Size(min = 2, max = 100)
    private String password;
 
    private Boolean rememberMe;

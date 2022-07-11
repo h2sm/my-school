@@ -1,4 +1,4 @@
-package com.h2sm.myschool.security.security;
+package com.h2sm.myschool.security;
 
 import com.h2sm.myschool.entities.PersonEntity;
 import com.h2sm.myschool.repository.PersonRepository;
