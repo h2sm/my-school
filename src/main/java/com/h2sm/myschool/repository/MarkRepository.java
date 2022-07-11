@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface MarkRepository extends JpaRepository<MarkEntity, Long> {
     List<MarkEntity> findByStudentEqualsAndLessonEquals(PersonEntity student, LessonEntity lesson);
+    List<MarkEntity> findByStudentEquals(PersonEntity person);
 }

@@ -2,13 +2,19 @@ package com.h2sm.myschool.entities;
 
 import com.h2sm.myschool.enums.Gender;
 import com.h2sm.myschool.enums.Position;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Data
 @Table(name = "persons")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class PersonEntity {
     @Id
     @Column(name = "person_id")
@@ -21,6 +27,8 @@ public class PersonEntity {
     private String surname;
     @Column(name = "email")
     private String email;
+    @Column(name = "password")
+    private String password;
     @Column(name = "gender")
     @Enumerated
     private Gender gender;
