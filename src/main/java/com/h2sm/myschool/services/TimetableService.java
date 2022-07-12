@@ -35,7 +35,7 @@ public class TimetableService {
                         .stream()
                         .filter(subject -> subject.getDayOfWeek().equals(thisDay))
                         .map(timetableMapper::dtoToWebDTO)
-                        .sorted().collect(Collectors.toList());
+                        .collect(Collectors.toList());
                 optimisedTable.put(thisDay, subjectsForThisDay);
             }
         });

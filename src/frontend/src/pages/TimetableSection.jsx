@@ -31,45 +31,49 @@ export const TimetableSection = () => {
             }
         });
         return <div>
-            <h2 style={{textAlign:"center"}}> Расписание</h2>
-            <table cellPadding={5} style={{ fontSize: 15 }} border={2}>
-            <tbody>
-            <tr>
-                <th>Понедельник</th>
-                <th>Вторник</th>
-                <th>Среда</th>
-                <th>Четверг</th>
-                <th>Пятница</th>
-                <th>Суббота</th>
-                <th>Воскресенье</th>
-            </tr>
-            {table.monday.map((item, i) => (
-                <th key={i}>
-                    <td>{item.name}<br/> {item.startTime} - {item.endTime}</td>
-                </th>
-            ))}
-            {table.tuesday.map((item, i) => (
-                <th key={i}>
-                    <td>{item.name} <br/>{item.startTime} - {item.endTime}</td>
-                </th>
-            ))}
-            {table.wednesday.map((item, i) => (
-                <th key={i}>
-                    <td>{item.name} <br/> {item.startTime} - {item.endTime}</td>
-                </th>
-            ))}
-            {table.tuesday.map((item, i) => (
-                <th key={i}>
-                    <td>{item.name} <br/>{item.startTime} - {item.endTime}</td>
-                </th>
-            ))}
-            {table.friday.map((item, i) => (
-                <th key={i}>
-                    <td>{item.name}<br/> {item.startTime} - {item.endTime}</td>
-                </th>
-            ))}
-            </tbody>
-        </table>
+            <h2 style={{textAlign: "center"}}> Расписание</h2>
+            <table cellPadding={5} style={{fontSize: 15}} border={2}>
+                <tbody>
+                <tr>
+                    <th>Понедельник</th>
+                    <th>Вторник</th>
+                    <th>Среда</th>
+                    <th>Четверг</th>
+                    <th>Пятница</th>
+                    <th>Суббота</th>
+                    <th>Воскресенье</th>
+                </tr>
+                <tr>
+                    {table.monday.map((item, i) => (
+                        <div>
+                            <td key={i}>
+                                <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime} <br/></a>
+                            </td>
+                        </div>
+                    ))}
+                    {table.tuesday.map((item, i) => (
+                        <th key={i}>
+                            <a>{item.name.subjectName} <br/>{item.startTime} - {item.endTime}</a>
+                        </th>
+                    ))}
+                    {table.wednesday.map((item, i) => (
+                        <th key={i}>
+                            <a>{item.name.subjectName} <br/> {item.startTime} - {item.endTime}</a>
+                        </th>
+                    ))}
+                    {table.tuesday.map((item, i) => (
+                        <th key={i}>
+                            <a>{item.name.subjectName} <br/>{item.startTime} - {item.endTime}</a>
+                        </th>
+                    ))}
+                    {table.friday.map((item, i) => (
+                        <th key={i}>
+                            <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime}</a>
+                        </th>
+                    ))}
+                </tr>
+                </tbody>
+            </table>
         </div>
     }
     return getTimetable();

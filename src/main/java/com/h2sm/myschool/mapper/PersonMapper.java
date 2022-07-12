@@ -5,7 +5,7 @@ import com.h2sm.myschool.entities.PersonEntity;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PersonSwapper implements EntitySwapper<PersonEntity, PersonDTO>{
+public class PersonMapper implements BaseMapper<PersonEntity, PersonDTO> {
     @Override
     public PersonDTO entityToDTO(PersonEntity entity) {
         return PersonDTO.builder()

@@ -3,13 +3,11 @@ package com.h2sm.myschool.controllers;
 import com.h2sm.myschool.dto.MarkDTO;
 import com.h2sm.myschool.services.MarksService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("/marks")
+@RestController()
 @AllArgsConstructor
 public class MarksController {
     private MarksService marksService;
@@ -19,10 +17,9 @@ public class MarksController {
         return marksService.getAllMarksForGivenLesson(lesson);
     }
 
-    @GetMapping("/all")
+    @RequestMapping(value = "/marks/all", method = RequestMethod.GET)
     public List<MarkDTO> getAllMarksForThisPerson(){
-//        var userDetails = (SecureUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return marksService.getAllMarksForGivenStudent("ppp");
+        return marksService.getAllMarksForGivenStudent();
     }
 
 }

@@ -14,7 +14,7 @@ import java.sql.Time;
 @NoArgsConstructor
 public class TimetableWebDTO implements Serializable {
     private Long id;
-    private String name;
+    private SubjectDTO name;
     private String type;
     private Time startTime;
     private Time endTime;
