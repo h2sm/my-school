@@ -21,6 +21,6 @@ public class SubjectEntity {
     @Column(name = "subject_description")
     private String subjectDescription;
     @Column(name = "subject_type")
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private SubjectType subjectType;
 }

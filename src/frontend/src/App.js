@@ -24,7 +24,7 @@ function App() {
                     <MarksSection/>
                 </header>
             </div>
-        );
+        )
     }
 }
 

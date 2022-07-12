@@ -25,6 +25,6 @@ public class TimetableEntity {
     @Column(name = "lesson_stop_timestamp")
     private Time timeStop;
     @Column(name = "day_of_week")
-    @Enumerated
+    @Enumerated(value = EnumType.STRING)
     private DayOfWeek dayOfWeek;
 }
