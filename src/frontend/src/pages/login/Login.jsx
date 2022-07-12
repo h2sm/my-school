@@ -35,7 +35,6 @@ export const Login = ({setToken}) => {
                 console.log(d);
             }
         });
-        setToken(true);
         event.preventDefault();
     }
 

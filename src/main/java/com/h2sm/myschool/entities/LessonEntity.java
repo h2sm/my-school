@@ -11,6 +11,7 @@ import java.sql.Date;
 public class LessonEntity {
     @Id
     @Column(name = "lesson_id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
     @JoinColumn(name = "subject_id")
     @OneToOne

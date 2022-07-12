@@ -14,9 +14,8 @@ import java.time.DayOfWeek;
 @Data
 public class TimetableDTO {
     private long id;
-    private ClassDTO classDTO;
-    private SubjectDTO subjectDTO;
+    private String subjectDTO;
     private Time timeStart;
     private Time timeStop;
-    private DayOfWeek dayOfWeek;
+    private String dayOfWeek;
 }

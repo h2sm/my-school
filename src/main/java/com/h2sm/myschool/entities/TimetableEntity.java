@@ -12,6 +12,7 @@ import java.time.DayOfWeek;
 public class TimetableEntity {
     @Id
     @Column(name = "table_row_id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
     @JoinColumn(name = "class_id")
     @OneToOne

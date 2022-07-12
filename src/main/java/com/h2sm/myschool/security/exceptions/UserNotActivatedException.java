@@ -1,4 +1,4 @@
-package com.h2sm.myschool.security;
+package com.h2sm.myschool.security.exceptions;
 
 import org.springframework.security.core.AuthenticationException;
 

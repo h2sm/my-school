@@ -11,6 +11,7 @@ import java.sql.Date;
 public class MarkEntity {
     @Id
     @Column(name = "mark_id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
     @Column(name = "mark")
     private int mark;

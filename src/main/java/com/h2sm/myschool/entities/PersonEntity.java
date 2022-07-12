@@ -18,6 +18,7 @@ import javax.persistence.*;
 public class PersonEntity {
     @Id
     @Column(name = "person_id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long personID;
     @Column(name = "name")
     private String name;

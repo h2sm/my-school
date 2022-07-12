@@ -11,6 +11,7 @@ import javax.persistence.*;
 public class SubjectEntity {
     @Id
     @Column(name = "subject_id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private long id;
     @JoinColumn(name = "teacher_id")
     @OneToOne
