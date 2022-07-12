@@ -30,10 +30,10 @@ public class PersonEntity {
     @Column(name = "password")
     private String password;
     @Column(name = "gender")
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Gender gender;
     @Column(name = "position")
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Position position;
 
 }

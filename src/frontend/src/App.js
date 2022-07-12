@@ -5,12 +5,12 @@ import {Login} from "./pages/login/Login";
 import {useState} from "react";
 
 function App() {
-    const [logged, setLogged] = useState(false);
-    if (logged === false) {
+    const [token, setToken] = useState('');
+    if (token === '') {
         return (
             <div className="App">
                 <header className="App-header">
-                    <Login setLogged={setLogged}/>
+                    <Login setToken={setToken}/>
                 </header>
             </div>
         );

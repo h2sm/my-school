@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import {useState} from "react";
+import $ from 'jquery';
 
-export const Login = ({setLogged}) => {
+export const Login = ({setToken}) => {
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
 
@@ -14,8 +15,27 @@ export const Login = ({setLogged}) => {
     }
 
     function handleSubmit(event) {
-        alert('Отправленное: ' + login + ' ' + password);
-        setLogged(true);
+        const data = {
+            username: login,
+            password: password,
+            rememberMe: true,
+        };
+        console.log(data);
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/api/authenticate",
+            data: JSON.stringify(data),
+            contentType: "application/json",
+            success: function (response) {
+                localStorage.setItem("jwtToken", response.id_token);
+                setToken(response.id_token);
+            },
+            error: function (d) {
+                setToken('');
+                console.log(d);
+            }
+        });
+        setToken(true);
         event.preventDefault();
     }
 
@@ -38,5 +58,5 @@ export const Login = ({setLogged}) => {
 }
 
 Login.propTypes = {
-    setLogged: PropTypes.func,
+    setToken: PropTypes.string,
 }
