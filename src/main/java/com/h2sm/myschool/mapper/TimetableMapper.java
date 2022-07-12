@@ -5,6 +5,7 @@ import com.h2sm.myschool.dto.TimetableWebDTO;
 import com.h2sm.myschool.entities.TimetableEntity;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
 import java.util.Locale;
 
 @Component
@@ -20,7 +21,7 @@ public class TimetableMapper implements EntitySwapper<TimetableEntity, Timetable
                 .build();
     }
 
-    public TimetableWebDTO dtoToWebDTO(TimetableDTO dto){
+    public TimetableWebDTO dtoToWebDTO(TimetableDTO dto){//это ваще пиздец полный, я не умею в жс и реакт, нахера я его в стек взял ...
         return TimetableWebDTO.builder()
                 .name(dto.getSubjectDTO())
                 .id(dto.getId())
