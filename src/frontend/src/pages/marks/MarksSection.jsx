@@ -1,5 +1,7 @@
 import $ from "jquery";
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from '@mui/material';
+// import CustomModal from "../addon/CustomModal";
+import SimpleTooltip from "../addon/SimpleTooltip";
 
 
 export const MarksSection = () => {
@@ -23,7 +25,6 @@ export const MarksSection = () => {
                         <TableRow>
                             <TableCell>Предмет</TableCell>
                             <TableCell align="left">Оценки</TableCell>
-                            <TableCell>Сообщение</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -33,8 +34,10 @@ export const MarksSection = () => {
                                 sx={{ '&:last-child td, &:last  -child th': { border: 0 } }}
                             >
                                 <TableCell component="th" scope="row">{value}</TableCell>
-                                <TableCell align="left">{key.mark}</TableCell>
-                                <TableCell align="left">{key.description}</TableCell>
+                                <TableCell align="left">
+                                    <SimpleTooltip obj={key}/>
+                                </TableCell>
+                                {/*<TableCell align="left">{key.description}</TableCell>*/}
                             </TableRow>
                         ))}
                     </TableBody>
