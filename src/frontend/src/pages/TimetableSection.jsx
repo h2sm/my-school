@@ -44,33 +44,41 @@ export const TimetableSection = () => {
                     <th>Воскресенье</th>
                 </tr>
                 <tr>
-                    {table.monday.map((item, i) => (
-                        <div>
-                            <td key={i}>
-                                <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime} <br/></a>
-                            </td>
-                        </div>
-                    ))}
-                    {table.tuesday.map((item, i) => (
-                        <th key={i}>
-                            <a>{item.name.subjectName} <br/>{item.startTime} - {item.endTime}</a>
-                        </th>
-                    ))}
-                    {table.wednesday.map((item, i) => (
-                        <th key={i}>
-                            <a>{item.name.subjectName} <br/> {item.startTime} - {item.endTime}</a>
-                        </th>
-                    ))}
-                    {table.tuesday.map((item, i) => (
-                        <th key={i}>
-                            <a>{item.name.subjectName} <br/>{item.startTime} - {item.endTime}</a>
-                        </th>
-                    ))}
-                    {table.friday.map((item, i) => (
-                        <th key={i}>
-                            <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime}</a>
-                        </th>
-                    ))}
+                    <th>
+                        {table.monday.map((item, i) => (
+                            <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime} <br/></a>
+                        ))}
+                    </th>
+                    <th>
+                        {table.tuesday.map((item, i) => (
+                            <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime} <br/></a>
+                        ))}
+                    </th>
+                    <th>
+                        {table.wednesday.map((item, i) => (
+                            <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime} <br/></a>
+                        ))}
+                    </th>
+                    <th>
+                        {table.thursday.map((item, i) => (
+                            <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime} <br/></a>
+                        ))}
+                    </th>
+                    <th>
+                        {table.friday.map((item, i) => (
+                            <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime} <br/></a>
+                        ))}
+                    </th>
+                    <th>
+                        {/*{table.friday.map((item, i) => (*/}
+                        {/*    <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime} <br/></a>*/}
+                        {/*))}*/}
+                    </th>
+                    <th>
+                        {/*{table.friday.map((item, i) => (*/}
+                        {/*    <a>{item.name.subjectName}<br/> {item.startTime} - {item.endTime} <br/></a>*/}
+                        {/*))}*/}
+                    </th>
                 </tr>
                 </tbody>
             </table>

@@ -3,7 +3,7 @@ import './App.css';
 import {TimetableSection} from "./pages/TimetableSection";
 import {Login} from "./pages/login/Login";
 import {useState} from "react";
-import {MarksSection} from "./pages/MarksSection";
+import {MarksSection} from "./pages/marks/MarksSection";
 
 function App() {
     const [token, setToken] = useState('');

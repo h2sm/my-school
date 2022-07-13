@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController()
 @AllArgsConstructor
@@ -18,7 +19,7 @@ public class MarksController {
     }
 
     @RequestMapping(value = "/marks/all", method = RequestMethod.GET)
-    public List<MarkDTO> getAllMarksForThisPerson(){
+    public Map<String, List<MarkDTO>> getAllMarksForThisPerson(){
         return marksService.getAllMarksForGivenStudent();
     }
 
