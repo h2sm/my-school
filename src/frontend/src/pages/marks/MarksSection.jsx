@@ -4,19 +4,18 @@ import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow}
 
 export const MarksSection = () => {
     const TOKEN = "Bearer " + localStorage.getItem("jwtToken");
-    let marks = null;
+    let subjectsAndMarks = null;
+    let subjectsMap = new Map;
 
-    function createData(
-        subject: string,
-        marks: number[],
-    ) {
-        return { subject, marks };
+    function createDataMap(subjectsAndMarksMap) {
+        for (let subject of Object.keys(subjectsAndMarksMap)) {
+            var marks = subjectsAndMarks[subject];
+            subjectsMap.set(marks, subject);
+        }
+        return subjectsMap;
     }
-    const rows = [
-        createData('Матеша', [159, 6.0, 24, 4.0]),
-        createData('Англиш', [237, 9.0, 37, 4.3]),
-    ];
-    function doShit() {
+
+    function doShit(map) {
         return (
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -24,29 +23,24 @@ export const MarksSection = () => {
                         <TableRow>
                             <TableCell>Предмет</TableCell>
                             <TableCell align="left">Оценки</TableCell>
+                            <TableCell>Сообщение</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {rows.map((row) => (
+                        {Array.from(map).map(([[key], value]) => (
                             <TableRow
-                                key={row.subject}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                key={value}
+                                sx={{ '&:last-child td, &:last  -child th': { border: 0 } }}
                             >
-                                <TableCell component="th" scope="row">
-                                    {row.subject}
-                                </TableCell>
-                                <TableCell align="left">{row.marks.toString()}</TableCell>
+                                <TableCell component="th" scope="row">{value}</TableCell>
+                                <TableCell align="left">{key.mark}</TableCell>
+                                <TableCell align="left">{key.description}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
                 </Table>
             </TableContainer>
         );
-    }
-
-
-    function createRow(row) {
-
     }
 
     const getMarks = () => {
@@ -58,21 +52,21 @@ export const MarksSection = () => {
                 "Authorization": TOKEN,
             },
             success: function (response) {
-                marks = response;
-                console.log(response);
+                subjectsAndMarks = response;
             },
             error: function (d) {
                 console.log(d);
             }
         });
     }
-    getMarks();
-    doShit();
-    console.log(marks);
+    //getMarks();
+    //createDataMap(subjectsAndMarks)
+   // doShit();
     return (
         <div>
-            <h2>Оценки</h2>
-            {doShit()}
+            <h2>Успеваемость</h2>
+            {getMarks()}
+            {doShit(createDataMap(subjectsAndMarks))}
         </div>
     );
 
