@@ -12,7 +12,7 @@ export const MarksSection = () => {
     function createDataMap(subjectsAndMarksMap) {
         for (let subject of Object.keys(subjectsAndMarksMap)) {
             var marks = subjectsAndMarks[subject];
-            subjectsMap.set(marks, subject);
+            subjectsMap.set(subject, marks);
         }
         return subjectsMap;
     }
@@ -28,14 +28,16 @@ export const MarksSection = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {Array.from(map).map(([[key], value]) => (
+                        {console.log(map)}
+                        {Array.from(map).map(([key, [value]]) => (
                             <TableRow
-                                key={value}
+                                key={key}
                                 sx={{ '&:last-child td, &:last  -child th': { border: 0 } }}
                             >
-                                <TableCell component="th" scope="row">{value}</TableCell>
+                                <TableCell component="th" scope="row">{key}</TableCell>
                                 <TableCell align="left">
-                                    <SimpleTooltip obj={key}/>
+                                    {console.log(value)}
+                                    <SimpleTooltip obj={value}/>
                                 </TableCell>
                                 {/*<TableCell align="left">{key.description}</TableCell>*/}
                             </TableRow>

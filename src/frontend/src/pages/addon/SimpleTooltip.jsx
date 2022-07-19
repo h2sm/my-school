@@ -4,7 +4,7 @@ import "./css/index.css";
 import PropTypes from "prop-types";
 
 export const SimpleTooltip = (obj) => {
-    console.log(obj.obj);
+    console.log(obj);
     return (
         <Popup
             trigger={open => (
@@ -22,8 +22,6 @@ export const SimpleTooltip = (obj) => {
 
     )
 }
-
-
 
 SimpleTooltip.propTypes = {
     obj: PropTypes.array,
